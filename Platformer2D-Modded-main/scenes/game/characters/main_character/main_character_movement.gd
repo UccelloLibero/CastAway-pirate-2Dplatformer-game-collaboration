@@ -13,7 +13,7 @@ extends Node2D
 @onready var _collision := $"../AreaSword/CollisionShape2D" # Colicionador de espada
 @onready var _effect_sword := $"../EffectsSword" # Efectos de espada
 
-var gravity = 650 # Gravedad para el personaje
+var gravity = 650 # default 650 Gravedad para el personaje
 var velocity = 100 # Velocidad de movimiento en horizontal
 var jump = 220 # Capacidad de salto, entre mayor el número más se puede saltar
 # Character movement map
@@ -93,10 +93,17 @@ func _move(delta):
 		if character.is_on_floor():
 			_current_movement = _movements.JUMP_WITH_SWORD
 			_is_jumping = true
-			_jump_count += 1 # Sumamos el primer salto
+			#_jump_count += 1 # Sumamos el primer salto
 		elif _is_jumping and _jump_count < _max_jumps:
 			_current_movement = _movements.JUMP_WITH_SWORD
-			_jump_count += 1 # Sumamos el segundo salto
+			#_jump_count += 1 # Sumamos el segundo salto
+		elif character.position.y < 17:
+			_is_jumping = true
+			_current_movement = _movements.JUMP_WITH_SWORD
+			gravity = 325 #650 
+			velocity = 75 #100
+			jump = 220
+			
 
 	_apply_gravity(delta)
 	
