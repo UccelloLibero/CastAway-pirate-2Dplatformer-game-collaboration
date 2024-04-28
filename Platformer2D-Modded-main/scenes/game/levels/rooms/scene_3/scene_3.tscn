@@ -15,20 +15,23 @@ load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb
 load_path = "res://.godot/imported/small_cloud_3.png-2824e524f4818e08cf60700642ab74ab.ctex"
 
 [node name="Main" type="Node2D"]
+position = Vector2(-114, 17)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-114, 17)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1150, 0)
 
 [node name="Bg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -1
-position = Vector2(493, 317)
+position = Vector2(379, 286)
 scale = Vector2(3.07552, 5.17188)
 texture = ExtResource("1_5ethi")
 
 [node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-114, 17)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(1200, 0)
 
@@ -53,6 +56,7 @@ scale = Vector2(4, 2.667)
 texture = SubResource("CompressedTexture2D_wd54b")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-114, 17)
 motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(1200, 0)
 
@@ -72,11 +76,12 @@ scale = Vector2(6, 4)
 texture = SubResource("CompressedTexture2D_gwd4n")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-114, 17)
 motion_scale = Vector2(0.6, 0.6)
 motion_mirroring = Vector2(1200, 0)
 
 [node name="Cloud" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(249, 373)
+position = Vector2(194, 363)
 scale = Vector2(4, 4.324)
 texture = SubResource("CompressedTexture2D_brb6k")
 
@@ -88,10 +93,11 @@ texture = SubResource("CompressedTexture2D_brb6k")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_mv2rp")
 format = 2
-layer_1/tile_data = PackedInt32Array(917506, 131075, 1, 851970, 131075, 1, 786434, 131075, 1, 720898, 131075, 1, 655362, 131075, 1, 589826, 131075, 1, 524290, 131075, 1, 458754, 131075, 1, 393218, 131075, 1, 327682, 131075, 1, 262146, 131075, 1, 196610, 131075, 1, 131074, 131075, 1, 65538, 131075, 1, 2, 131075, 1, -65534, 131075, 1, -131070, 131075, 1, 983042, 131075, 1, 1048578, 65539, 0, 1048579, 65539, 0, 1048580, 65539, 0, 1048581, 65539, 0, 1048582, 65539, 0, 1048583, 65539, 0, 1048584, 65539, 0, 1048585, 65539, 0, 1048586, 65539, 0, 1048587, 65539, 0, 1048588, 65539, 0, 1048589, 131075, 0, 1114125, 131075, 1, 1114124, 65539, 1, 1114123, 65539, 1, 1114122, 65539, 1, 1114121, 65539, 1, 1114120, 65539, 1, 1114119, 65539, 1, 1114118, 65539, 1, 1114117, 65539, 1, 1114116, 65539, 1, 1114115, 65539, 1, 1114114, 65539, 1, 1048604, 65539, 0, 1048605, 65539, 0, 1048606, 65539, 0, 1048607, 65539, 0, 1048608, 65539, 0, 1048609, 65539, 0, 1048610, 65539, 0, 1048602, 3, 0, 1048611, 131075, 0, 1179661, 131075, 2, 1179660, 65539, 2, 1179659, 65539, 2, 1179658, 65539, 2, 1179657, 65539, 2, 1179656, 65539, 2, 1179655, 65539, 2, 1179654, 65539, 2, 1179653, 65539, 2, 1179652, 65539, 2, 1179651, 65539, 2, 1179650, 65539, 2, 1114146, 65539, 2, 1114145, 65539, 2, 1114144, 65539, 2, 1114143, 65539, 2, 1114142, 65539, 2, 1114141, 65539, 2, 1114140, 65539, 2, 1114139, 65539, 2, 1048603, 65539, 0, 1114147, 131075, 2, 1114138, 3, 2)
+layer_1/tile_data = PackedInt32Array(917506, 131075, 1, 851970, 131075, 1, 786434, 131075, 1, 720898, 131075, 1, 655362, 131075, 1, 589826, 131075, 1, 524290, 131075, 1, 458754, 131075, 1, 393218, 131075, 1, 327682, 131075, 1, 262146, 131075, 1, 196610, 131075, 1, 131074, 131075, 1, 65538, 131075, 1, 2, 131075, 1, -65534, 131075, 1, -131070, 131075, 1, 983042, 131075, 1, 1048578, 65539, 0, 1048579, 65539, 0, 1048580, 65539, 0, 1048581, 65539, 0, 1048582, 65539, 0, 1048583, 65539, 0, 1048584, 65539, 0, 1048585, 65539, 0, 1048586, 65539, 0, 1048587, 65539, 0, 1048588, 65539, 0, 1048589, 131075, 0, 1114125, 131075, 1, 1114124, 65539, 1, 1114123, 65539, 1, 1114122, 65539, 1, 1114121, 65539, 1, 1114120, 65539, 1, 1114119, 65539, 1, 1114118, 65539, 1, 1114117, 65539, 1, 1114116, 65539, 1, 1114115, 65539, 1, 1114114, 65539, 1, 1048604, 65539, 0, 1048605, 65539, 0, 1048606, 65539, 0, 1048607, 65539, 0, 1048608, 65539, 0, 1048609, 65539, 0, 1048610, 65539, 0, 1048602, 3, 0, 1048611, 131075, 0, 1179661, 65539, 4, 1179660, 589827, 4, 1179659, 65539, 2, 1179658, 65539, 2, 1179657, 65539, 2, 1179656, 65539, 2, 1179655, 65539, 2, 1179654, 65539, 2, 1179653, 65539, 2, 1179652, 65539, 2, 1179651, 65539, 2, 1179650, 65539, 2, 1114146, 65539, 2, 1114145, 65539, 2, 1114144, 65539, 2, 1114143, 65539, 2, 1114142, 65539, 2, 1114141, 65539, 2, 1114140, 65539, 2, 1114139, 655363, 4, 1048603, 65539, 0, 1114147, 131075, 2, 1114138, 65539, 4, 1179662, 65539, 4, 1179663, 65539, 4, 1179664, 131075, 4, 1114137, 65539, 4, 1114136, 65539, 4, 1114135, 3, 4)
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_e4qjl")]
-position = Vector2(274, 476)
+position = Vector2(312, 483)
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("character") instance=ExtResource("3_nj4wd")]
+limit_bottom = 1050
 character = NodePath("../MainCharacter")

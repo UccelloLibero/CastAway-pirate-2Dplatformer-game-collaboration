@@ -16,6 +16,7 @@ extends Node2D
 var gravity = 650 # default 650 Gravedad para el personaje
 var velocity = 100 # Velocidad de movimiento en horizontal
 var jump = 220 # Capacidad de salto, entre mayor el número más se puede saltar
+var swim_level = 595 # y value at which character "swims"
 # Character movement map
 var _movements = {
 	IDLE = "default",
@@ -70,7 +71,6 @@ func _unhandled_input(event):
 		_current_movement = _movements.BOMB
 	_set_animation()
 
-
 # General movement function of the character
 func _move(delta):
 	# When the left arrow key is pressed, we move the character to the left
@@ -93,15 +93,20 @@ func _move(delta):
 		if character.is_on_floor():
 			_current_movement = _movements.JUMP_WITH_SWORD
 			_is_jumping = true
-			#_jump_count += 1 # Sumamos el primer salto
+			_jump_count += 1 # Sumamos el primer salto
 		elif _is_jumping and _jump_count < _max_jumps:
 			_current_movement = _movements.JUMP_WITH_SWORD
-			#_jump_count += 1 # Sumamos el segundo salto
-		elif character.position.y < 17:
+			_jump_count += 1 # Sumamos el segundo salto
+		elif character.position.y > swim_level:
 			_is_jumping = true
 			_current_movement = _movements.JUMP_WITH_SWORD
 			gravity = 325 #650 
 			velocity = 75 #100
+			jump = 220 #220
+		
+		if character.position.y < swim_level:
+			gravity = 650
+			velocity = 100
 			jump = 220
 			
 
