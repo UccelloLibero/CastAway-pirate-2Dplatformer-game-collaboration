@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b1d750o6hts76"]
+[gd_scene load_steps=32 format=3 uid="uid://b1d750o6hts76"]
 
 [ext_resource type="Texture2D" uid="uid://b7takygm7xwpr" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/terrain/terrain_(32x32).png" id="1_vjpfc"]
 [ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="2_e4qjl"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://i2tqbuc1n3n4" path="res://assets/sprites/bird/BirdWingDown.png" id="17_pru5f"]
 [ext_resource type="Texture2D" uid="uid://q8x6b5b5ry2v" path="res://assets/sprites/bird/BirdWingUp.png" id="18_evtw4"]
 [ext_resource type="Script" path="res://scenes/game/levels/rooms/scene_3/Birdy.gd" id="19_56gr5"]
+[ext_resource type="PackedScene" uid="uid://c2nps502udtd6" path="res://scenes/game/levels/objects/front_palm_tree/front_palm_tree.tscn" id="19_rkdfi"]
 [ext_resource type="AudioStream" uid="uid://dfb4lvan1kwl2" path="res://assets/sounds/pirate_theme.ogg" id="21_ra8mc"]
 [ext_resource type="PackedScene" uid="uid://bo37g7mv4j6pn" path="res://scenes/game/enemy/crabby.tscn" id="22_od0tm"]
 
@@ -759,6 +760,12 @@ animation = &"shiny_skull"
 sprite_frames = SubResource("SpriteFrames_da2je")
 animation = &"bird"
 script = ExtResource("19_56gr5")
+
+[node name="PalmTree" parent="Objects" instance=ExtResource("19_rkdfi")]
+position = Vector2(216, 480)
+
+[node name="FrontPalmTree4" parent="Objects" instance=ExtResource("19_rkdfi")]
+position = Vector2(1283, 940)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_ra8mc")
