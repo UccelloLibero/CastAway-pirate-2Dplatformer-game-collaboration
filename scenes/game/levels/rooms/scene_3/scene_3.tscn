@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b1d750o6hts76"]
+[gd_scene load_steps=31 format=3 uid="uid://b1d750o6hts76"]
 
 [ext_resource type="Texture2D" uid="uid://b7takygm7xwpr" path="res://assets/sprites/treasure_hunters/palm_tree_island/sprites/terrain/terrain_(32x32).png" id="1_vjpfc"]
 [ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="2_e4qjl"]
@@ -6,7 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b5qjvfbte4svk" path="res://scenes/game/levels/objects/pickable_object/pickable_object.tscn" id="7_3337p"]
 [ext_resource type="PackedScene" uid="uid://c36rtvjb7r5d1" path="res://scenes/game/levels/objects/red_potion/red_potion.tscn" id="9_dkkcl"]
 [ext_resource type="Texture2D" uid="uid://cko84ul70syyx" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/small_maps/small_map_1/01.png" id="10_k3l0i"]
+[ext_resource type="Texture2D" uid="uid://cyfbqtkfnkjmx" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/golden_skull/01.png" id="11_bhqm6"]
+[ext_resource type="Texture2D" uid="uid://2qnwi7fhl8hs" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/golden_skull/03.png" id="12_e8y8f"]
+[ext_resource type="Texture2D" uid="uid://cfbhuyj6u5dk7" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/golden_skull/05.png" id="13_kcpbm"]
 [ext_resource type="Texture2D" uid="uid://paia22j1lsb7" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/small_maps/small_map_1/04.png" id="13_wxq18"]
+[ext_resource type="Texture2D" uid="uid://bm4jh14xmcrl8" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/golden_skull/07.png" id="14_frfgw"]
+[ext_resource type="Texture2D" uid="uid://cfrgp02hk7t6a" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/golden_skull/08.png" id="15_4v7cn"]
 [ext_resource type="Texture2D" uid="uid://cs7laotb2rme6" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/small_maps/small_map_1/06.png" id="15_n1l7u"]
 [ext_resource type="PackedScene" uid="uid://deedu63sld0es" path="res://scenes/game/levels/objects/death/death.tscn" id="16_54h14"]
 [ext_resource type="Texture2D" uid="uid://002ge2n6e475" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/small_maps/small_map_1/08.png" id="17_203uq"]
@@ -635,6 +640,29 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_hn6sp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bhqm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_e8y8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kcpbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_frfgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4v7cn")
+}],
+"loop": true,
+"name": &"shiny_skull",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_da2je"]
 animations = [{
 "frames": [{
@@ -713,11 +741,17 @@ position = Vector2(740, 947)
 position = Vector2(766, 944)
 
 [node name="map" type="AnimatedSprite2D" parent="Collectible objects"]
-position = Vector2(900, 900)
-scale = Vector2(1, 2.083)
+position = Vector2(901, 911)
+scale = Vector2(1.9, 2.1915)
 sprite_frames = SubResource("SpriteFrames_hq77i")
 animation = &"map"
 script = ExtResource("17_ovuyd")
+
+[node name="golden_skull" type="AnimatedSprite2D" parent="Collectible objects"]
+position = Vector2(1936, 677)
+scale = Vector2(1.375, 1.32143)
+sprite_frames = SubResource("SpriteFrames_hn6sp")
+animation = &"shiny_skull"
 
 [node name="Objects" type="Node2D" parent="."]
 
