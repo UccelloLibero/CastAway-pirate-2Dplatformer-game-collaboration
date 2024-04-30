@@ -764,7 +764,7 @@ script = ExtResource("19_56gr5")
 [node name="PalmTree" parent="Objects" instance=ExtResource("19_rkdfi")]
 position = Vector2(216, 480)
 
-[node name="FrontPalmTree4" parent="Objects" instance=ExtResource("19_rkdfi")]
+[node name="PalmTree2" parent="Objects" instance=ExtResource("19_rkdfi")]
 position = Vector2(1283, 940)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
