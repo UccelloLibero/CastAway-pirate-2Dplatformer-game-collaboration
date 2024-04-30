@@ -28,6 +28,8 @@ script/source = "extends Area2D
 	\"red_diamond\",
 	\"gold_coin\",
 	\"silver_coin\",
+	\"golden_skull\",
+	\"small_map_1\"
 ) var animation: String
 
 # Definimos el sprite animado de la moneda

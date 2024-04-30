@@ -16,7 +16,7 @@ var points = {
 	"BlueDiamond": 0,
 	"GreenDiamond": 0,
 	"RedDiamond": 0,
-	"Bomb": 0,
+	"Bomb": 0
 }
 
 # Auxiliary variables to change the score of a type of collectible object

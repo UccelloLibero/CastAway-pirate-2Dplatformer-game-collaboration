@@ -11,7 +11,7 @@ extends Area2D
 	"green_diamond", 
 	"red_diamond",
 	"gold_coin",
-	"silver_coin",
+	"silver_coin"
 ) var animation: String
 
 # Define the animated sprite of the coin

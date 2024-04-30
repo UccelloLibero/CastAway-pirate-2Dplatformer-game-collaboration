@@ -45,7 +45,7 @@ load_path = "res://.godot/imported/small_cloud_1.png-40532304be8a8e58b358963bfcb
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d1lya"]
 load_path = "res://.godot/imported/small_cloud_3.png-2824e524f4818e08cf60700642ab74ab.ctex"
 
-[node name="Main" type="Node2D"]
+[node name="Main2" type="Node2D"]
 
 [node name="AmbientSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_xvhx7")
