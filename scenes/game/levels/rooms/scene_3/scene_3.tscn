@@ -825,3 +825,11 @@ position = Vector2(247, 668)
 z_index = -1
 position = Vector2(2222, 542)
 _path_to_scene = "res://scenes/game/levels/rooms/scene_3/scene_3.tscn"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 200.0
+offset_top = 394.0
+offset_right = 240.0
+offset_bottom = 417.0
+text = "Hurry, matey! 
+We must get that map and the golden skull, yarr! "
